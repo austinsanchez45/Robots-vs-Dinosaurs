@@ -14,7 +14,7 @@ class Robot:
             dinosaur.alive = False
 
     def weapon_selection(self):
-        weapon_choice = input(f"""\nWhich weapon would you like to use for {self.name}?
+        weapon_choice = input(f"""\nWhich weapon would you like {self.name} to use?
         \n1: Plasma Rifle: Attack Power - 20
         \n2: Sword: Attack Power - 15
         \n3: Railgun: Attack Power - 50
