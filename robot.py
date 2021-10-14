@@ -3,8 +3,9 @@ from weapon import Weapon
 class Robot:
     def __init__(self):
         self.name = ""
-        self.health = 0
+        self.health = 100
         self.weapon = Weapon()
+        self.alive = True
 
     def attack(self, dinosaur):
         print(f"\n{self.name} blasts the {dinosaur.name} with their {self.weapon}!")
