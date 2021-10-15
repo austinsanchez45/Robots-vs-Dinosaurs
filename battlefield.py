@@ -53,10 +53,36 @@ class Battlefield:
         return False
 
     def show_dino_opponent_options(self):
-        pass
+        invalid_target = True
+        while invalid_target:
+            player_target = int(input("""
+            \nPick your dinosaurs target to attack!
+            \n1: {self.fleet.robots[0].name} with {self.fleet.robots[0].health} HP
+            \n2: {self.fleet.robots[1].name} with {self.fleet.robots[1].health} HP
+            \n3: {self.fleet.robots[2].name} with {self.fleet.robots[2].health} HP
+            \n""")) - 1
+            if self.fleet.robots[player_target].alive:
+                return player_target
+            elif self.fleet.robots[player_target].alive == False:
+                print(f"{self.fleet.robots[player_target].name} is already destroyed! Choose another target!")
+            else:
+                print("Invalid input. Try again.")
 
     def show_robo_opponent_options(self):
-        pass
+        invalid_target = True
+        while invalid_target:
+            player_target = int(input("""
+            \nPick your robots target to attack!
+            \n1: {self.herd.dinosaurs[0].name} with {self.herd.dinosaurs[0].health} HP
+            \n2: {self.herd.dinosaurs[1].name} with {self.herd.dinosaurs[1].health} HP
+            \n3: {self.herd.dinosaurs[2].name} with {self.herd.dinosaurs[2].health} HP
+            \n""")) - 1
+            if self.herd.dinosaurs[player_target].alive:
+                return player_target
+            elif self.herd.dinosaurs[player_target].alive == False:
+                print(f"{self.herd.dinosaurs[player_target].name} has already been stopped! Choose another target!")
+            else:
+                print("Invalid input. Try again.")
 
     def display_winners(self, winners):
         if winners == "Dinosaurs":
