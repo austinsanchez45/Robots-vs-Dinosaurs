@@ -1,5 +1,5 @@
 from battlefield import Battlefield 
 
-start_battle = Battlefield()
+start_game = Battlefield()
 
-start_battle.run_battle()
+start_game.run_battle()

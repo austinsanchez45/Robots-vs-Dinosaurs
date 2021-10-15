@@ -16,4 +16,3 @@ class Herd:
         self.dinosaurs[0].dinosaurs_attacking(0)
         self.dinosaurs[1].dinosaurs_attacking(1)
         self.dinosaurs[2].dinosaurs_attacking(2)
-    
